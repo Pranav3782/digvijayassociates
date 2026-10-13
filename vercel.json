@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/resource/(.*)\\.aspx$",
+      "dest": "/www.digvijayassociates.com/resource/$1.aspx.html"
+    },
+    {
+      "src": "/resources/(.*)\\.aspx$",
+      "dest": "/www.digvijayassociates.com/resources/$1.aspx.html"
+    },
+    {
+      "src": "/(.*)\\.aspx$",
+      "dest": "/www.digvijayassociates.com/$1.aspx.html"
+    },
+    {
+      "src": "/(image|Image|css|fonts|usercss|laws|resource|resources|notificationsearch)/(.*)",
+      "dest": "/www.digvijayassociates.com/$1/$2"
+    },
+    {
+      "src": "/WebResource\\.axd(.*)",
+      "dest": "/www.digvijayassociates.com/WebResource.axd$1"
+    },
+    {
+      "src": "/index\\.html",
+      "dest": "/www.digvijayassociates.com/index.html"
+    },
+    {
+      "src": "/",
+      "dest": "/www.digvijayassociates.com/index.html"
+    },
+    {
+      "handle": "filesystem"
+    }
+  ]
+}

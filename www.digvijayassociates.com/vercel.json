@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/resource/(.*)\\.aspx$",
+      "dest": "/resource/$1.aspx.html"
+    },
+    {
+      "src": "/resources/(.*)\\.aspx$",
+      "dest": "/resources/$1.aspx.html"
+    },
+    {
+      "src": "/(.*)\\.aspx$",
+      "dest": "/$1.aspx.html"
+    },
+    {
+      "handle": "filesystem"
+    }
+  ]
+}

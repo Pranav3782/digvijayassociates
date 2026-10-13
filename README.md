@@ -85,4 +85,23 @@ To solve this:
 1. Real GNU `wget` (v1.21.4) was installed using `winget install JernejSimoncic.Wget`.
 2. The entire site was mirrored using the exact flags, preserving the full directory structure, resources, and internal link conversions.
 
+---
+
+## ☁️ Deploy to Vercel
+
+This repository is pre-configured with `vercel.json` for seamless static deployment on [Vercel](https://vercel.com/):
+
+### Option A: Via Vercel Web Dashboard (Easiest)
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Import your GitHub repository: `Pranav3782/digvijayassociates`.
+3. Keep default settings (no build command needed, root directory `./`).
+4. Click **Deploy**.
+
+> **Note:** The included `vercel.json` automatically maps all routes, handles ASP.NET (`.aspx` ↔ `.html`) rewrites, static assets (`image/`, `usercss/`, `fonts/`), and CORS headers out of the box!
+
+### Option B: Via Vercel CLI
+```bash
+vercel --prod
+```
+
 # digvijayassociates
